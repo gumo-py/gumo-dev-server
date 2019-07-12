@@ -2,8 +2,6 @@ import flask
 import logging
 import sys
 import os
-import datetime
-import hashlib
 
 from gumo.core import configure as core_configure
 
@@ -28,4 +26,4 @@ def hello():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(host='0.0.0.0', port=os.environ.get('SERVER_PORT', 8080), debug=True)
