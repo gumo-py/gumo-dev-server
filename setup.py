@@ -8,7 +8,7 @@ dependencies = [
     'pyyaml >= 5.1',
     'injector >= 0.13.1',
     'gumo-core >= 0.1.0a6',
-    'gumo-task-emulator >= 0.1.0a0',
+    'gumo-task-emulator >= 0.1.0a2',
 ]
 
 with open("README.md", "r") as fh:

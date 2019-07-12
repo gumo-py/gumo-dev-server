@@ -2,4 +2,4 @@ flask
 gumo-core==0.1.0a6
 gumo-datastore==0.1.0a1
 gumo-task==0.1.0a2
-gumo-task-emulator==0.1.0a0
+gumo-task-emulator==0.1.0a2
