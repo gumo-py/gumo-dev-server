@@ -190,20 +190,31 @@ def _auto_fill_environ():
         os.environ['SERVER_PORT'] = '5000'
 
 
+admin_blueprint = flask.Blueprint('gumo-dev-server', __name__, template_folder='template')
+
+
+@admin_blueprint.route('/')
+def root():
+    return flask.render_template(
+        'admin_dashboard.html'
+    )
+
+
 def _build_admin_server() -> flask.Flask:
     app = flask.Flask('admin_server')
 
     from gumo.task_emulator import task_emulator_flask_blueprints
+    from datastore_viewer import DatastoreViewer
 
     for blueprint in task_emulator_flask_blueprints():
         app.register_blueprint(blueprint=blueprint)
 
-    @app.route('/')
-    def root():
-        return flask.redirect('/task_emulator/dashboard')
+    for blueprint in DatastoreViewer().flask_blueprints():
+        app.register_blueprint(blueprint=blueprint)
+
+    app.register_blueprint(blueprint=admin_blueprint)
 
     return app
-
 
 
 def _configure_for_task_emulator(server_host: str, server_port: Union[str, int]):
