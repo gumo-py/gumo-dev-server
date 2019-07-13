@@ -9,6 +9,7 @@ dependencies = [
     'injector >= 0.13.1',
     'gumo-core >= 0.1.0a6',
     'gumo-task-emulator >= 0.1.0a2',
+    'datastore-viewer >= 0.0.6a0'
 ]
 
 with open("README.md", "r") as fh:
