@@ -38,3 +38,11 @@ clean:
 pip-compile:
 	pip-compile --output-file=requirements.txt requirements.in
 	pip3 install -r requirements.txt
+
+.PHONY: run-sample
+run-sample:
+	GOOGLE_CLOUD_PROJECT=gumo-dev-server \
+		DATASTORE_EMULATOR_HOST=127.0.0.1:8081 \
+		SERVER_PORT=8080 \
+		ADMIN_PORT=5001 \
+		python ./gumo/dev_server/presentation/cli/__init__.py sample/app.yaml
