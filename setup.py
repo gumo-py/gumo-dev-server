@@ -7,8 +7,8 @@ description = 'Gumo Dev Server Utilities'
 dependencies = [
     'pyyaml >= 5.1',
     'injector >= 0.13.1',
-    'gumo-core >= 0.1.0a6',
-    'gumo-task-emulator >= 0.1.0a2',
+    'gumo-core >= 0.1.0a7',
+    'gumo-task-emulator >= 0.1.0a3',
     'datastore-viewer >= 0.0.6a0'
 ]
 
