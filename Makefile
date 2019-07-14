@@ -38,8 +38,3 @@ clean:
 pip-compile:
 	pip-compile --output-file=requirements.txt requirements.in
 	pip3 install -r requirements.txt
-
-.PHONY: test
-test: build
-	pip3 install dist/${package_name}*.tar.gz
-	GOOGLE_CLOUD_PROJECT=gumo-core-test pytest -v --junit-xml=test-reports/results.xml tests
