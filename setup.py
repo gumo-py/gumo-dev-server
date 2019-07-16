@@ -41,4 +41,5 @@ setuptools.setup(
             'gumo-dev-server = gumo.dev_server:gumo_dev_server',
         ]
     },
+    include_package_data=True,
 )
