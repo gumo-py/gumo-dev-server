@@ -38,7 +38,7 @@ setuptools.setup(
     install_requires=dependencies,
     entry_points={
         'console_scripts': [
-            'gumo-dev-server = gumo.core:gumo_dev_server',
+            'gumo-dev-server = gumo.dev_server:gumo_dev_server',
         ]
     },
 )
