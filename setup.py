@@ -2,7 +2,7 @@ import setuptools
 
 
 name = 'gumo-dev-server'
-version = '0.0.1a6'
+version = '0.0.1'
 description = 'Gumo Dev Server Utilities'
 dependencies = [
     'pyyaml >= 5.1',
