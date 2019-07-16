@@ -2,12 +2,14 @@ import setuptools
 
 
 name = 'gumo-dev-server'
-version = '0.0.1a1'
+version = '0.0.1a6'
 description = 'Gumo Dev Server Utilities'
 dependencies = [
     'pyyaml >= 5.1',
     'injector >= 0.13.1',
-    'gumo-core >= 0.1.0a6',
+    'gumo-core >= 0.1.0a7',
+    'gumo-task-emulator >= 0.1.0a3',
+    'datastore-viewer >= 0.0.6a0'
 ]
 
 with open("README.md", "r") as fh:
@@ -36,7 +38,8 @@ setuptools.setup(
     install_requires=dependencies,
     entry_points={
         'console_scripts': [
-            'gumo-dev-server = gumo.core:gumo_dev_server',
+            'gumo-dev-server = gumo.dev_server:gumo_dev_server',
         ]
     },
+    include_package_data=True,
 )

@@ -39,7 +39,10 @@ pip-compile:
 	pip-compile --output-file=requirements.txt requirements.in
 	pip3 install -r requirements.txt
 
-.PHONY: test
-test: build
-	pip3 install dist/${package_name}*.tar.gz
-	GOOGLE_CLOUD_PROJECT=gumo-core-test pytest -v --junit-xml=test-reports/results.xml tests
+.PHONY: run-sample
+run-sample:
+	GOOGLE_CLOUD_PROJECT=gumo-dev-server \
+		DATASTORE_EMULATOR_HOST=127.0.0.1:8081 \
+		SERVER_PORT=8080 \
+		ADMIN_PORT=5001 \
+		python ./gumo/dev_server/presentation/cli/__init__.py sample/app.yaml
