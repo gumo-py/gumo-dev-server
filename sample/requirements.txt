@@ -27,7 +27,7 @@ grpcio==1.22.0            # via google-api-core, googleapis-common-protos, grpc-
 gumo-core==0.1.2          # via gumo-datastore, gumo-dev-server, gumo-task, gumo-task-emulator
 gumo-datastore==0.1.0     # via gumo-task, gumo-task-emulator
 gumo-dev-server==0.0.1
-gumo-task-emulator==0.1.0  # via gumo-dev-server
+gumo-task-emulator==0.1.1  # via gumo-dev-server
 gumo-task==0.1.0          # via gumo-task-emulator
 httplib2==0.13.0          # via google-api-python-client, google-auth-httplib2
 idna==2.8                 # via requests
@@ -51,4 +51,4 @@ urllib3==1.25.3           # via requests
 werkzeug==0.15.4          # via flask
 
 # The following packages are considered to be unsafe in a requirements file:
-# setuptools==41.0.1        # via google-api-core, jsonschema, protobuf
+# setuptools==41.1.0        # via google-api-core, jsonschema, protobuf
