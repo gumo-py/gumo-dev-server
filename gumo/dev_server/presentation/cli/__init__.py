@@ -181,13 +181,13 @@ def _auto_fill_environ():
 
     if os.environ.get('SERVER_HOST') is None:
         logging.warning(f'os.environ["SERVER_HOST"] does not configured.')
-        logging.warning(f'os.environ["SERVER_HOST"] = "0.0.0.0" (by auto-fill)')
-        os.environ['SERVER_HOST'] = '0.0.0.0'
-
     if os.environ.get('SERVER_PORT') is None:
         logging.warning(f'os.environ["SERVER_PORT"] does not configured.')
-        logging.warning(f'os.environ["SERVER_PORT"] = "5000" (by auto-fill)')
-        os.environ['SERVER_PORT'] = '5000'
+    if 'SERVER_HOST' not in os.environ or 'SERVER_PORT' not in os.environ:
+        raise RuntimeError(
+            f'The environment variable "SERVER_HOST" or "SERVER_PORT" is not configured. '
+            f'Please configure of local application host and port.'
+        )
 
 
 admin_blueprint = flask.Blueprint('gumo-dev-server', __name__, template_folder='template')
