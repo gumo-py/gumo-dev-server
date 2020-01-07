@@ -42,7 +42,7 @@ pyasn1-modules==0.2.5     # via google-auth
 pyasn1==0.4.5             # via pyasn1-modules, rsa
 pyrsistent==0.15.3        # via jsonschema
 pytz==2019.1              # via google-api-core
-pyyaml==5.1.2             # via flasgger, gumo-core, gumo-dev-server
+pyyaml==5.3               # via flasgger, gumo-core, gumo-dev-server
 requests==2.22.0          # via google-api-core
 rsa==4.0                  # via google-auth
 six==1.12.0               # via flasgger, google-api-core, google-api-python-client, google-auth, google-resumable-media, grpcio, jsonschema, protobuf, pyrsistent
@@ -51,4 +51,4 @@ urllib3==1.25.3           # via requests
 werkzeug==0.15.4          # via flask
 
 # The following packages are considered to be unsafe in a requirements file:
-# setuptools==41.1.0        # via google-api-core, jsonschema, protobuf
+# setuptools
