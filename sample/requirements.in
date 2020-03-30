@@ -1,2 +1,2 @@
 flask
-gumo-dev-server>=0.0.1
+gumo-dev-server>=0.1.0a1
