@@ -2,14 +2,14 @@ import setuptools
 
 
 name = 'gumo-dev-server'
-version = '0.1.1'
+version = '0.1.2'
 description = 'Gumo Dev Server Utilities'
 dependencies = [
     'pyyaml >= 5.1',
     'injector >= 0.13.1',
     'gumo-core >= 0.1.3',
     'gumo-task-emulator >= 0.2.5',
-    'datastore-viewer >= 0.2.0'
+    'datastore-viewer >= 0.3.0'
 ]
 
 with open("README.md", "r") as fh:
