@@ -2,13 +2,13 @@ import setuptools
 
 
 name = 'gumo-dev-server'
-version = '0.1.2'
+version = '0.3.0'
 description = 'Gumo Dev Server Utilities'
 dependencies = [
     'pyyaml >= 5.1',
     'injector >= 0.13.1',
     'gumo-core >= 0.1.3',
-    'gumo-task-emulator >= 0.2.5',
+    'gumo-task-emulator >= 0.2.5, >= 0.3.0',
     'datastore-viewer >= 0.3.0'
 ]
 
